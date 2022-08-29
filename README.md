@@ -45,7 +45,7 @@ It is pretty easy to run the software if you have get your environment ready, be
 ### Basic fermi-surface painting functons
 The software achieved almost all basic fuctions of fermi-surface plotting functions. After you open the software successfully, you will see the window below,
 
-![1.png](https://github.com/wentmil0705/dhva_skeaf_data_analysis/tree/main/test/1.png)
+![1.png](./test/1.png)
 
 Then you can click **File -> Import bxsf file** to input the fermi-surface file, the basic format of bxsf file is showed in the test file, remember to keep the same format or you will get different wrong reports and the software will quit. Choose different ways to show the fermi-surface,
   1. Mode: basically simple if you only input bxsf file
@@ -62,7 +62,7 @@ Then you can click **File -> Import bxsf file** to input the fermi-surface file,
 
 Below is an example of way to show fermi surface,
 
-![2.png](https://github.com/wentmil0705/dhva_skeaf_data_analysis/tree/main/test/2.png)
+![2.png](./test/2.png)
 
 ### Showing skeaf results functions
 If you want to analyze the results generate from skeaf, you can click **File->Import all results file** and choose **bxsf file, results_long.out, results_orbitoutlines_invAng.out/results_orbitoutlines_invau.out**, then clik **Import**, the lower part is a table showing the calculating results, you can click one of them to show the extreme value and orbit outline, you can also check the trait checkbox and choose more than one frequencies to show the orbit in the fermi surface,
@@ -73,12 +73,12 @@ If you want to analyze the results generate from skeaf, you can click **File->Im
 
 Below are some examples,
 
-![3.png](https://github.com/wentmil0705/dhva_skeaf_data_analysis/tree/main/test/3,png)
-![4.png](https://github.com/wentmil0705/dhva_skeaf_data_analysis/tree/main/test/4.png)
-![5.png](https://github.com/wentmil0705/dhva_skeaf_data_analysis/tree/main/test/5.png)
-![6.png](https://github.com/wentmil0705/dhva_skeaf_data_analysis/tree/main/test/6.png)
-![7.png](https://github.com/wentmil0705/dhva_skeaf_data_analysis/tree/main/test/7.png)
-![8.npg](https://github.com/wentmil0705/dhva_skeaf_data_analysis/tree/main/test/8.png)
+![3.png](./test/3,png)
+![4.png](./test/4.png)
+![5.png](./test/5.png)
+![6.png](./test/6.png)
+![7.png](./test/7.png)
+![8.npg](./test/8.png)
 
 
 ## Contact me
