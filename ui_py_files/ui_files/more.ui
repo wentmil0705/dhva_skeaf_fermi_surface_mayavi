@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>More</class>
+ <widget class="QDialog" name="More">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>411</width>
+    <height>239</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>320</width>
+    <height>230</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>More</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>391</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="opacity_layout">
+      <item>
+       <layout class="QVBoxLayout" name="opacity_label_layout">
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="fs_opacity_label">
+          <property name="text">
+           <string>FS Opacity</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="line_opacity_label">
+          <property name="text">
+           <string>Line Opacity</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="trait_opacity_label">
+          <property name="text">
+           <string>Trait Opacity</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="slice_opacity_label">
+          <property name="text">
+           <string>Slice Opacity</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="opacity_slider_layout">
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QSlider" name="fs_opacity_slider">
+          <property name="minimumSize">
+           <size>
+            <width>230</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="line_opacity_slider">
+          <property name="minimumSize">
+           <size>
+            <width>170</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="trait_opacity_slider">
+          <property name="maximum">
+           <number>10</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="slice_opacity_slider">
+          <property name="maximum">
+           <number>10</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="opacity_line_layout">
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="fs_opacity_line"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="line_opacity_line"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="trait_opacity_line"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="slice_opacity_line"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="color_layout">
+      <item>
+       <layout class="QHBoxLayout" name="backgroud_color_layout">
+        <item>
+         <widget class="QPushButton" name="background_button">
+          <property name="text">
+           <string>Backgroud Color</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="background_color_frame">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="slice_color_layout">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="slice_color_button">
+          <property name="text">
+           <string>Slice Color</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="slice_color_frame">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="magnetic_field_checkbox">
+      <property name="text">
+       <string>Magnetic Field</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

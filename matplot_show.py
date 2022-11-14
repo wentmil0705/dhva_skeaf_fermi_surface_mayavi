@@ -47,6 +47,26 @@ class MyMatplotlibFigure(FigureCanvasQTAgg, QtGui.QWidget):
         self.figs.canvas.draw()  # 这里注意是画布重绘，self.figs.canvas
         self.figs.canvas.flush_events()  # 画布刷新self.figs.canvas
     
+    def initSlice(self):
+        self.figs.clf()
+        self.axes = self.figs.add_subplot(111)        
+        self.axes.set_aspect('equal', adjustable='box')
+        self.axes.axis('off')
+
+    def plotSlice(self, contour_2d, new_res, efermi, color):
+        self.axes.tricontour(contour_2d[:,0], contour_2d[:,1], new_res, [efermi], colors=color) 
+        self.figs.canvas.draw()  # 这里注意是画布重绘，self.figs.canvas
+        self.figs.canvas.flush_events()  # 画布刷新self.figs.canvas
+
+    def plotEdge(self, hull, points):
+        for count, simplex in enumerate(hull.simplices):
+            self.axes.plot(points[simplex, 0], points[simplex, 1], 'k-')  # 绘制边框
+            # self.axes.scatter(points[hull.vertices[count], 0], points[hull.vertices[count], 1])
+            self.figs.canvas.draw()  # 这里注意是画布重绘，self.figs.canvas
+            self.figs.canvas.flush_events()  # 画布刷新self.figs.canvas
+        # self.axes.set_xlim(np.min(points[hull.vertices][:,0])-0.2,np.max(points[hull.vertices][:,0])+0.2)
+        # self.axes.set_ylim(np.min(points[hull.vertices][:,1])-0.2,np.max(points[hull.vertices][:,1])+0.2)
+
     def drawOrbit(self, row, orbit_data):
         
         self.row = row
@@ -171,9 +191,9 @@ class MyMatplotlibFigure(FigureCanvasQTAgg, QtGui.QWidget):
                 break
             slice_now = slice_now - 1
             orbit_now = df[(df['slice'] == slice_now) & (df['orbit_match'] == orbit_now)]['orbit'].values[0]
-            total = total.append(df[(df['slice'] == slice_now) & (df['orbit'] == orbit_now)])
+            total = pd.concat([total, df[(df['slice'] == slice_now) & (df['orbit'] == orbit_now)]])
         while slice_latter <= df['slice'].max():
-            total = total.append(df[(df['slice'] == slice_latter) & (df['orbit'] == orbit_latter)])
+            total = pd.concat([total, df[(df['slice'] == slice_latter) & (df['orbit'] == orbit_latter)]])
             orbit_latter = df[(df['slice'] == slice_latter) & (df['orbit'] == orbit_latter)]['orbit_match'].values[0]
             slice_latter = slice_latter + 1
             if np.isnan(orbit_latter):

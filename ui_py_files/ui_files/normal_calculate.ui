@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NormalCalculate</class>
+ <widget class="QWidget" name="NormalCalculate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1144</width>
+    <height>281</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Normal Calculate</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_10" columnstretch="2,3">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="config_layout">
+     <item row="0" column="0" colspan="2">
+      <layout class="QGridLayout" name="bxsf_layout" columnstretch="1,4">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="bxsf_button">
+         <property name="text">
+          <string>BXSF file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="bxsf_label">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <layout class="QHBoxLayout" name="fermi_inter_layout">
+       <property name="spacing">
+        <number>20</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="fermi_layout" columnstretch="1,1">
+         <item row="0" column="0">
+          <widget class="QLabel" name="fermi_label">
+           <property name="text">
+            <string>Fermi energy</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="fermi_line"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="inter_layout" columnstretch="1,1" columnminimumwidth="0,0">
+         <item row="0" column="0">
+          <widget class="QLabel" name="inter_label">
+           <property name="text">
+            <string>Interpolation</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="inter_line"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <layout class="QHBoxLayout" name="degree_layout">
+       <property name="spacing">
+        <number>20</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="theta_layout" columnstretch="1,1">
+         <item row="0" column="0">
+          <widget class="QLabel" name="theta_label">
+           <property name="text">
+            <string>Theta (degrees)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="theta_line"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="phi_layout" columnstretch="1,1">
+         <item row="0" column="0">
+          <widget class="QLabel" name="phi_label">
+           <property name="text">
+            <string>Phi (degrees)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="phi_line"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <layout class="QVBoxLayout" name="filter_layout">
+       <item>
+        <widget class="QLabel" name="filter_label">
+         <property name="text">
+          <string>Filter</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="min_ext_fs_layout" columnstretch="3,1">
+         <item row="0" column="0">
+          <widget class="QLabel" name="min_ext_fs_label">
+           <property name="text">
+            <string>Minumum extremal Fs freq. (kT)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="min_ext_fs_line"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="max_fac_diff_layout" columnstretch="3,1">
+         <item row="0" column="0">
+          <widget class="QLabel" name="max_fac_diff_label">
+           <property name="text">
+            <string>Maximum factional diff.  between orbit freqs.</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="max_fc_diff_line"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="max_dist_layout" columnstretch="3,1">
+         <item row="0" column="0">
+          <widget class="QLabel" name="max_dist_label">
+           <property name="text">
+            <string>Maximum distance between orbit avg.  coords.</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="max_dist_line"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="start_button">
+       <property name="text">
+        <string>Start!</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <widget class="QTextBrowser" name="run_content"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

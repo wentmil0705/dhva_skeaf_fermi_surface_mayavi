@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>B_direction</class>
+ <widget class="QWidget" name="B_direction">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>427</width>
+    <height>123</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>B direction</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="B_direction_layout" columnstretch="1,1,2">
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="Theta_layout" columnstretch="1,2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="Theta_label">
+         <property name="text">
+          <string>Theta</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="Theta_line"/>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1" rowspan="2">
+      <widget class="Line" name="seperate_line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" rowspan="2">
+      <layout class="QGridLayout" name="b_layout">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="b1_layout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="b1_label">
+           <property name="text">
+            <string>b1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="b1_line"/>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="1">
+        <layout class="QGridLayout" name="b2_layout">
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="b2_line"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="b2_label">
+           <property name="text">
+            <string>b2</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="2">
+        <layout class="QGridLayout" name="b3_layout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="b3_label">
+           <property name="text">
+            <string>b3</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="b3_line"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <layout class="QGridLayout" name="Phi_layout" columnstretch="1,2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="Phi_label">
+         <property name="text">
+          <string>Phi</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="Phi_line"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="updateB_button">
+     <property name="text">
+      <string>Update B direction</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

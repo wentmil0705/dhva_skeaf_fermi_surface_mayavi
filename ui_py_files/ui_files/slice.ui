@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>slice_window</class>
+ <widget class="QMainWindow" name="slice_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>582</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Slice</string>
+  </property>
+  <widget class="QWidget" name="slice_centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,5">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="param_layout" rowstretch="2,5">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="bxsf_layout" columnstretch="2,4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="bxsf_label">
+          <property name="text">
+           <string>Bxsf files</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="CheckableComboBox" name="bxsf_checkableComboBox"/>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1">
+       <layout class="QGridLayout" name="orbits_layout" columnstretch="2,4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="orbits_label">
+          <property name="text">
+           <string>orbits</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="orbits_ComboBox"/>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="2">
+       <layout class="QGridLayout" name="BZ_layout">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="BZ1_line"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="BZ3_line"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLineEdit" name="BZ2_line"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="BZ_button">
+          <property name="text">
+           <string>BZ</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QGridLayout" name="Theta_layout" columnstretch="1,0">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="Theta_line"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="Theta_label">
+          <property name="text">
+           <string>Theta (degree)</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="1">
+       <layout class="QGridLayout" name="Phi_layout" columnstretch="1,0">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="Phi_line"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="Phi_label">
+          <property name="text">
+           <string>Phi (degree)</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="2">
+       <layout class="QHBoxLayout" name="line_mid_layout">
+        <item>
+         <widget class="QCheckBox" name="line_checkbox">
+          <property name="text">
+           <string>line</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="mid_slider">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="MyMatplotlibFigure" name="slice_widget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="slice_menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>582</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="slice_menufiles">
+    <property name="title">
+     <string>files</string>
+    </property>
+    <addaction name="slice_actionimport_bxsf_files"/>
+    <addaction name="slice_actionimport_results_orbitoutlines_files"/>
+   </widget>
+   <widget class="QMenu" name="menumore">
+    <property name="title">
+     <string>more</string>
+    </property>
+    <addaction name="actionsync"/>
+   </widget>
+   <addaction name="slice_menufiles"/>
+   <addaction name="menumore"/>
+  </widget>
+  <widget class="QStatusBar" name="slice_statusbar"/>
+  <action name="slice_actionimport_bxsf_files">
+   <property name="text">
+    <string>import bxsf files</string>
+   </property>
+  </action>
+  <action name="slice_actionFirst_Bz">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>First BZ</string>
+   </property>
+  </action>
+  <action name="slice_actionPrimitive">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Primitive</string>
+   </property>
+  </action>
+  <action name="slice_actionmag">
+   <property name="text">
+    <string>sync</string>
+   </property>
+  </action>
+  <action name="actionedge">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>edge</string>
+   </property>
+  </action>
+  <action name="slice_actionimport_results_orbitoutlines_files">
+   <property name="text">
+    <string>import results_orbitoutlines files</string>
+   </property>
+  </action>
+  <action name="actionsync">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>sync</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CheckableComboBox</class>
+   <extends>QComboBox</extends>
+   <header>comboCheckbox</header>
+  </customwidget>
+  <customwidget>
+   <class>MyMatplotlibFigure</class>
+   <extends>QWidget</extends>
+   <header>matplot_show</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
